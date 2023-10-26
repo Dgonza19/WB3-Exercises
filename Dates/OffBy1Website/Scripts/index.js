@@ -1,17 +1,18 @@
 "use strict";
 
+window.onload = init;
 
-function init() {
-  const theButton = document.getElementById("clickButton");
-  clickButton.onclick.clickButtonClicked;
+function init(){
+  const inputDate = document.getElementById("inputDate");
+  inputDate.onclick = inputDateClicked;
 }
 
-function clickButtonClicked(){
-  const dateField = document.getElementById("dateField");
-  let dateValue = dateField.value;
- 
-  const outputDate = document.getElementById("outputDate");
-  outputDate.value = dateValue;
+function inputDateClicked(){
+  const dateMessage = document.getElementById("dateMessage");
+  let messageValue = dateMessage.value;
 
-  console.log(outputDate.value.toString());
+  let message = "That is your favorite date!";
+
+  const outputMessage = document.getElementById("outputMessage");
+  outputMessage.innerHTML = message;
 }
